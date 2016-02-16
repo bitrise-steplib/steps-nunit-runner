@@ -159,6 +159,10 @@ class Analyzer
     configuration = "#{config}|#{platform}"
     build_commands = []
 
+    nunit_path = ENV['NUNIT_PATH']
+    nunit_console_path = File.join(nunit_path, 'nunit3-console.exe')
+    raise "nunit3-console.exe not found at path: #{nunit_console_path}" unless File.exists?(nunit_console_path)
+
     @solution[:projects].each do |project|
       next unless project[:mappings]
       project_configuration = project[:mappings][configuration]
@@ -169,7 +173,7 @@ class Analyzer
 
       command = [
           "mono",
-          "\"/Users/bitrise/Downloads/NUnit-3.0.1 (1)/bin/nunit3-console.exe\"",
+          "\"#{nunit_console_path}\"",
           "\"#{project[:path]}\"",
           "\"/config:#{project_config}\""
       ]
