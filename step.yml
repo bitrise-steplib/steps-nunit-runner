@@ -3,8 +3,8 @@ summary: NUnit runner
 description: |-
   Executes a set of NUnit tests against your Xamarin solution file
 website: https://github.com/bitrise-steplib/steps-nunit-runner
-source_code_url: https://github.com/bitrise-steplib/-nunit-runner
-support_url: https://github.com/bitrise-steplib/-nunit-runner/issues
+source_code_url: https://github.com/bitrise-steplib/steps-nunit-runner
+support_url: https://github.com/bitrise-steplib/steps-nunit-runner/issues
 host_os_tags:
   - osx-10.10
 project_type_tags:
