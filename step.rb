@@ -40,7 +40,7 @@ parser = OptionParser.new do |opts|
   opts.on('-s', '--solution path', 'Solution') { |s| options[:solution] = s unless s.to_s == '' }
   opts.on('-c', '--configuration config', 'Configuration') { |c| options[:configuration] = c unless c.to_s == '' }
   opts.on('-l', '--platform platform', 'Platform') { |l| options[:platform] = l unless l.to_s == '' }
-  opts.on('-o', '--options options', 'Nunit options') { |o| options[:options] = o unless o.to_s == '' }
+  opts.on('-o', '--options options', 'NUnit options') { |o| options[:options] = o unless o.to_s == '' }
   opts.on('-h', '--help', 'Displays Help') do
     exit
   end
@@ -65,11 +65,11 @@ fail_with_message('No platform environment found') unless options[:platform]
 # Main
 builder = Builder.new(options[:solution], options[:configuration], options[:platform], nil)
 begin
-  # The solution has to be built before runing the nunit tests
+  # The solution has to be built before runing the NUnit tests
   builder.build_solution
 
-  # Executing nunit tests
+  # Executing NUnit tests
   builder.run_nunit_tests(options[:options])
 rescue => ex
-  fail_with_message("nunit test failed: #{ex}")
+  fail_with_message("NUnit test failed: #{ex}")
 end
