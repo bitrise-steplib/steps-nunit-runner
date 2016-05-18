@@ -30,9 +30,9 @@ end
 #
 # Parse options
 options = {
-    solution: nil,
-    configuration: nil,
-    platform: nil
+  solution: nil,
+  configuration: nil,
+  platform: nil
 }
 
 parser = OptionParser.new do |opts|
@@ -71,5 +71,8 @@ begin
   # Executing NUnit tests
   builder.run_nunit_tests(options[:options])
 rescue => ex
-  fail_with_message("NUnit test failed: #{ex}")
+  error_with_message(ex.inspect.to_s)
+  error_with_message('--- Stack trace: ---')
+  error_with_message(ex.backtrace.to_s)
+  exit(1)
 end
