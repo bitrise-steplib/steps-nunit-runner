@@ -38,4 +38,3 @@ inputs:
       title: "NUnit command options"
       description: |
         Additional option flags when running nunit3-console
-      is_required: false
