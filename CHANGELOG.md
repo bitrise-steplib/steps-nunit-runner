@@ -1,6 +1,12 @@
-## Changelog (Current version: 0.9.1)
+## Changelog (Current version: 0.9.2)
 
 -----------------
+
+### 0.9.2 (2016 May 25)
+
+* [01cbc60] prepare for release
+* [b93fa0c] Merge pull request #5 from bitrise-steplib/project_regex
+* [4d4ff80] builder update - fixed assembly reference regex
 
 ### 0.9.1 (2016 May 18)
 
@@ -11,4 +17,4 @@
 
 -----------------
 
-Updated: 2016 May 18
+Updated: 2016 May 25
