@@ -63,8 +63,8 @@ fail_with_message('No platform environment found') unless options[:platform]
 
 #
 # Main
-builder = Builder.new(options[:solution], options[:configuration], options[:platform], nil)
 begin
+  builder = Builder.new(options[:solution], options[:configuration], options[:platform], nil)
   # The solution has to be built before runing the NUnit tests
   builder.build_solution
 
