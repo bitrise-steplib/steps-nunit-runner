@@ -32,7 +32,8 @@ end
 options = {
   solution: nil,
   configuration: nil,
-  platform: nil
+  platform: nil,
+  options: nil
 }
 
 parser = OptionParser.new do |opts|
@@ -54,6 +55,7 @@ puts '========== Configs =========='
 puts " * solution: #{options[:solution]}"
 puts " * configuration: #{options[:configuration]}"
 puts " * platform: #{options[:platform]}"
+puts " * options: #{options[:options]}"
 
 #
 # Validate options
@@ -63,8 +65,8 @@ fail_with_message('No platform environment found') unless options[:platform]
 
 #
 # Main
-builder = Builder.new(options[:solution], options[:configuration], options[:platform], nil)
 begin
+  builder = Builder.new(options[:solution], options[:configuration], options[:platform], nil)
   # The solution has to be built before runing the NUnit tests
   builder.build_solution
 
