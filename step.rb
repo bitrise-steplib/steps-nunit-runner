@@ -32,7 +32,8 @@ end
 options = {
   solution: nil,
   configuration: nil,
-  platform: nil
+  platform: nil,
+  options: nil
 }
 
 parser = OptionParser.new do |opts|
@@ -54,6 +55,7 @@ puts '========== Configs =========='
 puts " * solution: #{options[:solution]}"
 puts " * configuration: #{options[:configuration]}"
 puts " * platform: #{options[:platform]}"
+puts " * options: #{options[:options]}"
 
 #
 # Validate options
