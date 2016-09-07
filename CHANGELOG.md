@@ -1,6 +1,11 @@
-## Changelog (Current version: 0.9.2)
+## Changelog (Current version: 0.9.3)
 
 -----------------
+
+### 0.9.3 (2016 Sep 07)
+
+* [821a7ec] prepare for 0.9.3
+* [0faa78f] Xamarin builder update (#6)
 
 ### 0.9.2 (2016 May 25)
 
@@ -17,4 +22,4 @@
 
 -----------------
 
-Updated: 2016 May 25
+Updated: 2016 Sep 07
