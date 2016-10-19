@@ -1,6 +1,13 @@
-## Changelog (Current version: 0.9.3)
+## Changelog (Current version: 1.0.0)
 
 -----------------
+
+### 1.0.0 (2016 Oct 19)
+
+* [9351744] gitignore _tmp folder
+* [661950a] share workflow update
+* [4eafc88] prepare for 1.0.0
+* [3020e1c] use go-xamarin (#7)
 
 ### 0.9.3 (2016 Sep 07)
 
@@ -22,4 +29,4 @@
 
 -----------------
 
-Updated: 2016 Sep 07
+Updated: 2016 Oct 19
