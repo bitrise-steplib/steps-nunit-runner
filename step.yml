@@ -14,6 +14,15 @@ type_tags: []
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
+deps:
+  brew:
+  - name: go
+  apt_get:
+  - name: golang
+    bin_name: go
+toolkit:
+  go:
+    package_name: github.com/bitrise-steplib/steps-nunit-runner
 inputs:
   - xamarin_solution: $BITRISE_PROJECT_PATH
     opts:
@@ -38,3 +47,14 @@ inputs:
       title: "NUnit command options"
       description: |
         Additional option flags when running nunit3-console
+outputs:
+  - BITRISE_XAMARIN_TEST_RESULT:
+    opts:
+      title: Result of the tests. 'succeeded' or 'failed'.
+      value_options:
+      - succeeded
+      - failed
+  - BITRISE_XAMARIN_TEST_FULL_RESULTS_TEXT:
+    opts:
+      title: Result of the tests.
+      description: ""
