@@ -150,7 +150,6 @@ func main() {
 
 	prepareCallback := func(solutionName string, projectName string, projectType constants.ProjectType, command *tools.Editable) {
 		if projectType == constants.ProjectTypeNunitTest {
-			fmt.Printf("Set options\n")
 			(*command).SetCustomOptions(customOptions...)
 		}
 	}
