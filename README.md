@@ -1,4 +1,4 @@
-# NUnit runner
+# NUnit 3 runner
 
 ## How to use this Step
 
