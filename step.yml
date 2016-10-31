@@ -1,7 +1,7 @@
 title: NUnit runner
 summary: NUnit runner
 description: |-
-  Executes a set of NUnit tests against your Xamarin solution file
+  Executes a set of NUnit 3 tests against your Xamarin solution file
 website: https://github.com/bitrise-steplib/steps-nunit-runner
 source_code_url: https://github.com/bitrise-steplib/steps-nunit-runner
 support_url: https://github.com/bitrise-steplib/steps-nunit-runner/issues
@@ -44,7 +44,7 @@ inputs:
       is_required: true
   - nunit_options:
     opts:
-      title: "NUnit command options"
+      title: "NUnit 3 command options"
       description: |
         Additional option flags when running nunit3-console
 outputs:
