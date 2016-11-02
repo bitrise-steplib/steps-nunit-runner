@@ -1,6 +1,12 @@
-## Changelog (Current version: 1.1.0)
+## Changelog (Current version: 1.1.1)
 
 -----------------
+
+### 1.1.1 (2016 Nov 02)
+
+* [2132430] prepare for 1.1.1
+* [4417135] NUnit test and Console Runner clarifications
+* [3c1ac97] Mention NUnit 3 only support (#9)
 
 ### 1.1.0 (2016 Oct 26)
 
@@ -34,4 +40,4 @@
 
 -----------------
 
-Updated: 2016 Oct 26
+Updated: 2016 Nov 02
