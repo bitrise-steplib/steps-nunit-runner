@@ -58,7 +58,7 @@ func (configs ConfigsModel) print() {
 
 func (configs ConfigsModel) validate() error {
 	if configs.XamarinSolution == "" {
-		return errors.New("No XamarinSolution parameter specified!")
+		return errors.New("no XamarinSolution parameter specified")
 	}
 	if exist, err := pathutil.IsPathExists(configs.XamarinSolution); err != nil {
 		return fmt.Errorf("Failed to check if XamarinSolution exist at: %s, error: %s", configs.XamarinSolution, err)
@@ -67,10 +67,10 @@ func (configs ConfigsModel) validate() error {
 	}
 
 	if configs.XamarinConfiguration == "" {
-		return errors.New("No XamarinConfiguration parameter specified!")
+		return errors.New("no XamarinConfiguration parameter specified")
 	}
 	if configs.XamarinPlatform == "" {
-		return errors.New("No XamarinPlatform parameter specified!")
+		return errors.New("no XamarinPlatform parameter specified")
 	}
 
 	return nil
