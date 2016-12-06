@@ -34,7 +34,7 @@ func createConfigsModelFromEnvs() ConfigsModel {
 		XamarinConfiguration: os.Getenv("xamarin_configuration"),
 		XamarinPlatform:      os.Getenv("xamarin_platform"),
 
-		CustomOptions: os.Getenv("options"),
+		CustomOptions: os.Getenv("nunit_options"),
 
 		DeployDir: os.Getenv("BITRISE_DEPLOY_DIR"),
 	}
