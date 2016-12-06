@@ -1,6 +1,12 @@
-## Changelog (Current version: 1.1.1)
+## Changelog (Current version: 1.1.2)
 
 -----------------
+
+### 1.1.2 (2016 Dec 06)
+
+* [f63c620] prepare for 1.1.2
+* [50688e5] custom options fix (#11)
+* [1130f99] lint fixes
 
 ### 1.1.1 (2016 Nov 02)
 
@@ -40,4 +46,4 @@
 
 -----------------
 
-Updated: 2016 Nov 02
+Updated: 2016 Dec 06
