@@ -43,18 +43,18 @@ workflows:
     - certificate-and-profile-installer: {}
     - xamarin-user-management: {}
     - nuget-restore:
-    - xamarin-archive:
-        inputs:
-        - xamarin_solution: $BITRISE_PROJECT_PATH
-        - xamarin_configuration: $BITRISE_XAMARIN_CONFIGURATION
-        - xamarin_platform: $BITRISE_XAMARIN_PLATFORM
+    # - xamarin-archive:
+    #     inputs:
+    #     - xamarin_solution: $BITRISE_PROJECT_PATH
+    #     - xamarin_configuration: $BITRISE_XAMARIN_CONFIGURATION
+    #     - xamarin_platform: $BITRISE_XAMARIN_PLATFORM
     - path::./:
         title: Step test
         inputs:
         - xamarin_solution: $BITRISE_PROJECT_PATH
         - xamarin_configuration: $BITRISE_XAMARIN_CONFIGURATION
         - xamarin_platform: $BITRISE_XAMARIN_PLATFORM
-        - build_before_test: "false"
+        - build_before_test: "true"
     - script:
         title: Output test
         is_always_run: true
