@@ -48,6 +48,15 @@ inputs:
       title: "NUnit Console Runner (nunit3-console.exe) command options"
       description: |
         Additional option flags when running NUnit Console Runner (nunit3-console.exe).
+  - build_before_test: "true"
+    opts:
+      title: Xamarin platform
+      description: |
+        Xamarin platform
+      value_options:
+      - "true"
+      - "false"
+      is_required: true
 outputs:
   - BITRISE_XAMARIN_TEST_RESULT:
     opts:
