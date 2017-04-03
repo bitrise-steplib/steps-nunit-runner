@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	cmdex "github.com/bitrise-io/go-utils/command"
+	"github.com/bitrise-io/go-utils/command"
 	"github.com/bitrise-io/go-utils/fileutil"
 	"github.com/bitrise-io/go-utils/log"
 	"github.com/bitrise-io/go-utils/pathutil"
@@ -84,7 +84,7 @@ func (configs ConfigsModel) validate() error {
 }
 
 func exportEnvironmentWithEnvman(keyStr, valueStr string) error {
-	cmd := cmdex.New("envman", "add", "--key", keyStr)
+	cmd := command.New("envman", "add", "--key", keyStr)
 	cmd.SetStdin(strings.NewReader(valueStr))
 	return cmd.Run()
 }

@@ -50,9 +50,9 @@ inputs:
         Additional option flags when running NUnit Console Runner (nunit3-console.exe).
   - build_before_test: "true"
     opts:
-      title: Xamarin platform
+      title: Build before test
       description: |
-        Xamarin platform
+        Set this option to `true` if you want to build your test projects before running tests.
       value_options:
       - "true"
       - "false"
