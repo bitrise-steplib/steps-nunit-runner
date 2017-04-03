@@ -54,7 +54,7 @@ workflows:
         - xamarin_solution: $BITRISE_PROJECT_PATH
         - xamarin_configuration: $BITRISE_XAMARIN_CONFIGURATION
         - xamarin_platform: $BITRISE_XAMARIN_PLATFORM
-        - build_before_test: "true"
+        - build_before_test: "false"
     - script:
         title: Output test
         is_always_run: true
