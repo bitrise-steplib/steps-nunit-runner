@@ -1,6 +1,11 @@
-## Changelog (Current version: 1.1.2)
+## Changelog (Current version: 1.2.0)
 
 -----------------
+
+### 1.2.0 (2017 Apr 03)
+
+* [4159abe] Prepare for 1.2.0
+* [0bc3f3a] Buildbeforetest (#12)
 
 ### 1.1.2 (2016 Dec 06)
 
@@ -46,4 +51,4 @@
 
 -----------------
 
-Updated: 2016 Dec 06
+Updated: 2017 Apr 03
