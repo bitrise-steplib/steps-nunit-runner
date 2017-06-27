@@ -1,6 +1,12 @@
-## Changelog (Current version: 1.2.0)
+## Changelog (Current version: 1.3.0)
 
 -----------------
+
+### 1.3.0 (2017 Jun 27)
+
+* [21e0d8a] prepare for 1.3.0
+* [c437810] Input grouping (#14)
+* [aa010a0] specifx buildtool (#13)
 
 ### 1.2.0 (2017 Apr 03)
 
@@ -51,4 +57,4 @@
 
 -----------------
 
-Updated: 2017 Apr 03
+Updated: 2017 Jun 27
