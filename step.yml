@@ -27,29 +27,28 @@ toolkit:
 inputs:
   - xamarin_solution: $BITRISE_PROJECT_PATH
     opts:
+      category: Config
       title: Path to Xamarin Solution
       description: |
         Path to Xamarin Solution
       is_required: true
   - xamarin_configuration: $BITRISE_XAMARIN_CONFIGURATION
     opts:
+      category: Config
       title: Xamarin project configuration
       description: |
         Xamarin project configuration
       is_required: true
   - xamarin_platform: $BITRISE_XAMARIN_PLATFORM
     opts:
+      category: Config
       title: Xamarin platform
       description: |
         Xamarin platform
       is_required: true
-  - nunit_options:
-    opts:
-      title: "NUnit Console Runner (nunit3-console.exe) command options"
-      description: |
-        Additional option flags when running NUnit Console Runner (nunit3-console.exe).
   - build_before_test: "true"
     opts:
+      category: Debug
       title: Build before test
       description: |
         Set this option to `true` if you want to build your test projects before running tests.
@@ -57,6 +56,12 @@ inputs:
       - "true"
       - "false"
       is_required: true
+  - nunit_options:
+    opts:
+      category: Debug
+      title: "NUnit Console Runner (nunit3-console.exe) command options"
+      description: |
+        Additional option flags when running NUnit Console Runner (nunit3-console.exe).
   - build_tool: "xbuild"
     opts:
       category: Debug
