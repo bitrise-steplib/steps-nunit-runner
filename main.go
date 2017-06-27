@@ -45,20 +45,17 @@ func createConfigsModelFromEnvs() ConfigsModel {
 }
 
 func (configs ConfigsModel) print() {
-	log.Infof("Build Configs:")
+	log.Infof("Configs:")
 
 	log.Printf("- XamarinSolution: %s", configs.XamarinSolution)
 	log.Printf("- XamarinConfiguration: %s", configs.XamarinConfiguration)
 	log.Printf("- XamarinPlatform: %s", configs.XamarinPlatform)
 
-	log.Infof("Nunit Configs:")
+	log.Infof("Debug:")
 
-	log.Printf("- CustomOptions: %s", configs.CustomOptions)
-
-	log.Infof("Other Configs:")
-
-	log.Printf("- BuildTool: %s", configs.BuildTool)
 	log.Printf("- BuildBeforeTest: %s", configs.BuildBeforeRun)
+	log.Printf("- CustomOptions: %s", configs.CustomOptions)
+	log.Printf("- BuildTool: %s", configs.BuildTool)
 	log.Printf("- DeployDir: %s", configs.DeployDir)
 }
 
@@ -66,11 +63,9 @@ func (configs ConfigsModel) validate() error {
 	if err := input.ValidateIfPathExists(configs.XamarinSolution); err != nil {
 		return fmt.Errorf("XamarinSolution - %s", err)
 	}
-
 	if err := input.ValidateIfNotEmpty(configs.XamarinConfiguration); err != nil {
 		return fmt.Errorf("XamarinConfiguration - %s", err)
 	}
-
 	if err := input.ValidateIfNotEmpty(configs.XamarinPlatform); err != nil {
 		return fmt.Errorf("XamarinPlatform - %s", err)
 	}
@@ -78,7 +73,6 @@ func (configs ConfigsModel) validate() error {
 	if err := input.ValidateWithOptions(configs.BuildBeforeRun, "true", "false"); err != nil {
 		return fmt.Errorf("BuildBeforeRun - %s", err)
 	}
-
 	if err := input.ValidateWithOptions(configs.BuildTool, "msbuild", "xbuild", "mdtool"); err != nil {
 		return fmt.Errorf("BuildTool - %s", err)
 	}
