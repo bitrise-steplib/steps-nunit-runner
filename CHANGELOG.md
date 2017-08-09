@@ -1,6 +1,12 @@
-## Changelog (Current version: 1.3.0)
+## Changelog (Current version: 1.4.0)
 
 -----------------
+
+### 1.4.0 (2017 Aug 09)
+
+* [0210c3d] prepare for 1.4.0
+* [fecd51c] removed mdtool, godeps-update (#15)
+* [da59c29] changelog fix
 
 ### 1.3.0 (2017 Jun 27)
 
@@ -57,4 +63,4 @@
 
 -----------------
 
-Updated: 2017 Jun 27
+Updated: 2017 Aug 09
