@@ -62,16 +62,15 @@ inputs:
       title: "NUnit Console Runner (nunit3-console.exe) command options"
       description: |
         Additional option flags when running NUnit Console Runner (nunit3-console.exe).
-  - build_tool: "xbuild"
+  - build_tool: "msbuild"
     opts:
       category: Debug
       title: Which tool to use for building?
       description: |-
         Which tool to use for building?
       value_options:
-      - xbuild
       - msbuild
-      - mdtool
+      - xbuild
       is_required: true
 outputs:
   - BITRISE_XAMARIN_TEST_RESULT:
