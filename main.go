@@ -73,7 +73,7 @@ func (configs ConfigsModel) validate() error {
 	if err := input.ValidateWithOptions(configs.BuildBeforeRun, "true", "false"); err != nil {
 		return fmt.Errorf("BuildBeforeRun - %s", err)
 	}
-	if err := input.ValidateWithOptions(configs.BuildTool, "msbuild", "xbuild", "mdtool"); err != nil {
+	if err := input.ValidateWithOptions(configs.BuildTool, "msbuild", "xbuild"); err != nil {
 		return fmt.Errorf("BuildTool - %s", err)
 	}
 
@@ -135,11 +135,9 @@ func main() {
 	fmt.Println()
 	log.Infof("Running all nunit test projects in solution: %s", configs.XamarinSolution)
 
-	buildTool := buildtools.Xbuild
-	if configs.BuildTool == "mdtool" {
-		buildTool = buildtools.Mdtool
-	} else if configs.BuildTool == "msbuild" {
-		buildTool = buildtools.Msbuild
+	buildTool := buildtools.Msbuild
+	if configs.BuildTool == "xbuild" {
+		buildTool = buildtools.Xbuild
 	}
 
 	builder, err := builder.New(configs.XamarinSolution, []constants.SDK{}, buildTool)
