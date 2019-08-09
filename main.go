@@ -178,18 +178,13 @@ func main() {
 		fmt.Println()
 	}
 
-	warnings := []string{}
+	var warnings []string
 	err = nil
 
 	if configs.BuildBeforeRun == "true" {
 		warnings, err = builder.BuildAndRunAllNunitTestProjects(configs.XamarinConfiguration, configs.XamarinPlatform, callback, prepareCallback)
 	} else {
 		warnings, err = builder.RunAllNunitTestProjects(configs.XamarinConfiguration, configs.XamarinPlatform, callback, prepareCallback)
-	}
-
-	resultLog, logErr := testResultLogContent(resultLogPth)
-	if logErr != nil {
-		log.Warnf("Failed to read test result, error: %s", logErr)
 	}
 
 	for _, warning := range warnings {
@@ -203,13 +198,12 @@ func main() {
 			log.Warnf("Failed to export environment: %s, error: %s", "BITRISE_XAMARIN_TEST_RESULT", err)
 		}
 
-		if resultLog != "" {
-			if err := steptools.ExportEnvironmentWithEnvman("BITRISE_XAMARIN_TEST_FULL_RESULTS_TEXT", resultLog); err != nil {
-				log.Warnf("Failed to export environment: %s, error: %s", "BITRISE_XAMARIN_TEST_FULL_RESULTS_TEXT", err)
-			}
-		}
-
 		os.Exit(1)
+	}
+
+	resultLog, logErr := testResultLogContent(resultLogPth)
+	if logErr != nil {
+		log.Warnf("Failed to read test result, error: %s", logErr)
 	}
 
 	if expErr := steptools.ExportEnvironmentWithEnvman("BITRISE_XAMARIN_TEST_RESULT", "succeeded"); expErr != nil {
